@@ -13,7 +13,7 @@ async def getid(client, message):
     reply = message.reply_to_message
 
     text = f"**[𝐌ᴇssᴀɢᴇ 𝐈ᴅ:]({message.link})** `{message_id}`\n"
-    text += f"**[ʏ𝐘ᴜʀ 𝐈ᴅ:](tg://user?id={your_id})** `{your_id}`\n"
+    text += f"**[𝐘oᴜʀ 𝐈ᴅ:](tg://user?id={your_id})** `{your_id}`\n"
 
     if not message.command:
         message.command = message.text.split()
