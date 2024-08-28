@@ -1,9 +1,9 @@
 import asyncio
+import config
+import random
 import os
 import re
 from typing import Union
-from pytgcalls.types.input_stream import InputStream
-from pytgcalls.types.input_stream import InputAudioStream
 
 import yt_dlp
 from pyrogram.enums import MessageEntityType
@@ -12,6 +12,14 @@ from youtubesearchpython.__future__ import VideosSearch
 
 from DAXXMUSIC.utils.database import is_on_off
 from DAXXMUSIC.utils.formatters import time_to_seconds
+
+
+def cookies():
+    cookie_dir = "DAXXMUSIC/utils/cookies"
+    cookies_files = [f for f in os.listdir(cookie_dir) if f.endswith(".txt")]
+
+    cookie_file = os.path.join(cookie_dir, random.choice(cookies_files))
+    return cookie_file
 
 
 async def shell_cmd(cmd):
@@ -123,6 +131,8 @@ class YouTubeAPI:
             link = link.split("&")[0]
         proc = await asyncio.create_subprocess_exec(
             "yt-dlp",
+            "--cookies",
+            cookies(),
             "-g",
             "-f",
             "best[height<=?720][width<=?1280]",
@@ -142,7 +152,7 @@ class YouTubeAPI:
         if "&" in link:
             link = link.split("&")[0]
         playlist = await shell_cmd(
-            f"yt-dlp -i --get-id --flat-playlist --playlist-end {limit} --skip-download {link}"
+            f"yt-dlp -i --get-id --flat-playlist --playlist-end {limit} --skip-download --cookies {cookies()} {link}"
         )
         try:
             result = playlist.split("\n")
@@ -179,7 +189,7 @@ class YouTubeAPI:
             link = self.base + link
         if "&" in link:
             link = link.split("&")[0]
-        ytdl_opts = {"quiet": True}
+        ytdl_opts = {"quiet": True, "cookiefile": cookies()}
         ydl = yt_dlp.YoutubeDL(ytdl_opts)
         with ydl:
             formats_available = []
@@ -245,12 +255,13 @@ class YouTubeAPI:
 
         def audio_dl():
             ydl_optssx = {
-                "format": "bestaudio/best",
+                "format": "bestaudio/[ext=m4a]",
                 "outtmpl": "downloads/%(id)s.%(ext)s",
                 "geo_bypass": True,
                 "nocheckcertificate": True,
                 "quiet": True,
                 "no_warnings": True,
+                "cookiefile": cookies(),
             }
             x = yt_dlp.YoutubeDL(ydl_optssx)
             info = x.extract_info(link, False)
@@ -262,12 +273,13 @@ class YouTubeAPI:
 
         def video_dl():
             ydl_optssx = {
-                "format": "bestvideo+bestaudio/best",
+                "format": "(bestvideo[height<=?720][width<=?1280][ext=mp4])+(bestaudio[ext=m4a])",
                 "outtmpl": "downloads/%(id)s.%(ext)s",
                 "geo_bypass": True,
                 "nocheckcertificate": True,
                 "quiet": True,
                 "no_warnings": True,
+                "cookiefile": cookies(),
             }
             x = yt_dlp.YoutubeDL(ydl_optssx)
             info = x.extract_info(link, False)
@@ -289,6 +301,7 @@ class YouTubeAPI:
                 "no_warnings": True,
                 "prefer_ffmpeg": True,
                 "merge_output_format": "mp4",
+                "cookiefile": cookies(),
             }
             x = yt_dlp.YoutubeDL(ydl_optssx)
             x.download([link])
@@ -310,6 +323,7 @@ class YouTubeAPI:
                         "preferredquality": "192",
                     }
                 ],
+                "cookiefile": cookies(),
             }
             x = yt_dlp.YoutubeDL(ydl_optssx)
             x.download([link])
@@ -323,7 +337,7 @@ class YouTubeAPI:
             fpath = f"downloads/{title}.mp3"
             return fpath
         elif video:
-            if await is_on_off(1):
+            if await is_on_off(config.YTDOWNLOADER):
                 direct = True
                 downloaded_file = await loop.run_in_executor(None, video_dl)
             else:
