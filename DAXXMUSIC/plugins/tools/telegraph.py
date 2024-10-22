@@ -14,7 +14,7 @@ def ul(_, message):
         for x in fk:
             url = "https://files.catbox.moe" + x
 
-        i.edit(f'Yᴏᴜʀ ʟɪɴᴋ sᴜᴄᴄᴇssғᴜʟ Gᴇɴ {url} ᴅᴏɴᴇ ᴘʀᴏᴅᴜᴄᴇᴅ 🥀 ʙʏ @HINDULOK_CHATTING_CLUB')
+        i.edit(f'Yᴏᴜʀ ʟɪɴᴋ sᴜᴄᴄᴇssғᴜʟ Gᴇɴ {url}  ᴘʀᴏᴅᴜᴄᴇᴅ 🥀 ʙʏ @HINDULOK_CHATTING_CLUB')
 
 ########____________________________________________________________######
 
@@ -28,4 +28,4 @@ def ul(_, message):
         for x in fk:
             url = "https://files.catbox.moe" + x
 
-        i.edit(f'Yᴏᴜʀ ʟɪɴᴋ sᴜᴄᴄᴇssғᴜʟ Gᴇɴ {url} ᴅᴏɴᴇ ᴘʀᴏᴅᴜᴄᴇᴅ 🥀 ʙʏ @HINDULOK_OFFICIAL')
+        i.edit(f'Yᴏᴜʀ ʟɪɴᴋ sᴜᴄᴄᴇssғᴜʟ Gᴇɴ {url}  ᴘʀᴏᴅᴜᴄᴇᴅ 🥀 ʙʏ @HINDULOK_OFFICIAL')
