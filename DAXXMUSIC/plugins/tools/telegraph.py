@@ -12,9 +12,9 @@ def ul(_, message):
         path = reply.download()
         fk = upload_file(path)
         for x in fk:
-            url = "https://telegra.ph" + x
+            url = "https://files.catbox.moe" + x
 
-        i.edit(f'Yᴏᴜʀ ʟɪɴᴋ sᴜᴄᴄᴇssғᴜʟ Gᴇɴ {url} ᴅᴏɴᴇ ʙʏ ʜɪɴᴀᴛᴀ x ʀᴏʙᴏᴛ ᴘʀᴏᴅᴜᴄᴇᴅ 🥀 ʙʏ @SAIFALLBOT')
+        i.edit(f'Yᴏᴜʀ ʟɪɴᴋ sᴜᴄᴄᴇssғᴜʟ Gᴇɴ {url} ᴅᴏɴᴇ ᴘʀᴏᴅᴜᴄᴇᴅ 🥀 ʙʏ @HINDULOK_CHATTING_CLUB')
 
 ########____________________________________________________________######
 
@@ -26,6 +26,6 @@ def ul(_, message):
         path = reply.download()
         fk = upload_file(path)
         for x in fk:
-            url = "https://graph.org" + x
+            url = "https://files.catbox.moe" + x
 
-        i.edit(f'Yᴏᴜʀ ʟɪɴᴋ sᴜᴄᴄᴇssғᴜʟ Gᴇɴ {url} ᴅᴏɴᴇ ʙʏ ʜɪɴᴀᴛᴀ x ʀᴏʙᴏᴛ ᴘʀᴏᴅᴜᴄᴇᴅ 🥀 ʙʏ @SAIFALLBOT')
+        i.edit(f'Yᴏᴜʀ ʟɪɴᴋ sᴜᴄᴄᴇssғᴜʟ Gᴇɴ {url} ᴅᴏɴᴇ ᴘʀᴏᴅᴜᴄᴇᴅ 🥀 ʙʏ @HINDULOK_OFFICIAL')
