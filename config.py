@@ -14,13 +14,13 @@ API_HASH = getenv("API_HASH")
 # ------------------------------------------------------
 BOT_TOKEN = getenv("BOT_TOKEN")
 # -------------------------------------------------------
-OWNER_USERNAME = getenv("OWNER_USERNAME","SAIF_DICTATOR")
+OWNER_USERNAME = getenv("OWNER_USERNAME","ABHINAV0_00")
 # --------------------------------------------------------
-BOT_USERNAME = getenv("BOT_USERNAME" , "HINATA_N_BOT")
+BOT_USERNAME = getenv("BOT_USERNAME" , "HINDULOK_MUSIC_BOT")
 # --------------------------------------------------------
-BOT_NAME = getenv("BOT_NAME" , "𝐇ιиαтα 𝗫 𝐑σвσт")
+BOT_NAME = getenv("BOT_NAME" , "ᯓ꯭𓆰꯭🔥꯭❛-꯭हिं꯭दू꯭लो꯭क꯭֟፝ ꯭꯭✘꯭ ꯭𝚳꯭𝛍꯭፝֟𝛘𝛊꯭𝛓-꯭𓆪᭄꯭ꪾ»꯭🚩")
 # ---------------------------------------------------------
-ASSUSERNAME = getenv("ASSUSERNAME" , "Naruto_for_Hinata")
+ASSUSERNAME = getenv("ASSUSERNAME" , "SONAHHHH")
 # ---------------------------------------------------------
 
 
@@ -38,7 +38,7 @@ DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 99999))
 LOGGER_ID = int(getenv("LOGGER_ID", -1002196929680))
 # ----------------------------------------------------------------
 # ----------------------------------------------------------------
-OWNER_ID = int(getenv("OWNER_ID", 6775819584))
+OWNER_ID = int(getenv("OWNER_ID", 7496704336))
 # -----------------------------------------------------------------
 # -----------------------------------------------------------------
 
@@ -53,7 +53,7 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 # ----------------------------------------------------------------
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/SAIFDEAD/SAIFMUSIC",
+    "https://github.com/HNDULOK/MUSIC",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "Master")
 GIT_TOKEN = getenv(
@@ -67,8 +67,8 @@ GIT_TOKEN = getenv(
 
 # ------------------------------------------------------------------------
 # -------------------------------------------------------------------------
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/SAIFALLBOT")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/BOTSUPPORT_CHAT")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/HINDULOK_OFFICIAL")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/HINDULOK_CHATTING_CLUB")
 # ------------------------------------------------------------------------------
 # -------------------------------------------------------------------------------
 
